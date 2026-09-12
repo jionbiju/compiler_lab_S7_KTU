@@ -1,0 +1,9 @@
+#include stdio.h
+int main ( )
+{
+    int c = 8 ;
+    float total = 3.14 ;
+    c = c + 1 ;
+    printf hello
+    return 0 ;
+}
