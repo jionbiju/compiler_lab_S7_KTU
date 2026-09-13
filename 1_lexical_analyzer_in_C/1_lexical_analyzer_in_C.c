@@ -1,45 +1,3 @@
-// #include <stdio.h>
-// #include <string.h>
-
-// int isKeyword(char *str){
-//     char *keywords[10] = {"int", "float", "char", "double", "if",
-//                            "else", "while", "for", "return", "void"};
-//     for(int i=0; i<10; i++){
-//         if(strcmp(str,keywords[i]) == 0){
-//             return 1;
-//         }
-//     }
-//     return 0;
-
-// }
-// int isLibraryFun(char *str){
-//     char *library[5] = {"printf","scanf","strcmp"};
-//     for(int i=0; i<3; i++){
-//         if(strcmp(str,library[i]) == 0){
-//             return 1;
-//         }
-//     }
-//     return 0;
-// }
-
-// int main(){
-//     FILE *fp;
-//     char word[100];
-//     fp = fopen("input.txt","r");
-//     if(fp == NULL){
-//         printf("Error while opening the file.\n");
-//         return -1;
-//     }
-//     while(fscanf(fp,"%s",word) != EOF){
-//         if(isKeyword(word)){
-//             printf("%s is a keyword\n",word);
-//         }
-//         else if(isLibraryFun(word)){
-//             printf("%s is a Library Fuction\n",word);
-//         }
-//     }
-// }
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -65,7 +23,7 @@ int isLibraryFun(char *str){
     return 0;
 }
 
-// #include, #define, etc.
+
 int isDirective(char *str){
     if(str[0] == '#'){
         return 1;
@@ -158,6 +116,9 @@ int main(){
 }
 
 /*
+Design and implement a lexical analyzer using C language to recognize all valid
+tokens in the input program. The lexical analyzer should ignore redundant spaces, tabs
+and newlines. It should also ignore comments.
 INPUT
 #include stdio.h
 int main ( )
