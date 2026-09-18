@@ -7,7 +7,7 @@
 %token num id
 %left '+''-'
 %left '*''/'
-%left '^'
+%right '^'
 %nonassoc UMINUS
 %%
 E:   E'+'E
@@ -15,7 +15,7 @@ E:   E'+'E
     |E'*'E
     |E'/'E
     |'('E')'
-    |'-'E%prec UMINUS
+    |'-'E %prec UMINUS
     |num
     |id
     ;
