@@ -8,7 +8,8 @@
 %token num alpha
 %left '+''-'
 %left '*''/'
-%right '^' %nonassoc UMINUS
+%right '^' 
+%nonassoc UMINUS
 
 %%
 S:E {printf("Result=%d",$1);};
