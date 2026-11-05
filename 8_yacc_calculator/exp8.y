@@ -5,7 +5,7 @@
     void yyerror(const char *s);
 %}
 
-%token num alpha
+%token num 
 %left '+''-'
 %left '*''/'
 %right '^' 
@@ -21,7 +21,6 @@ E:E'+'E {$$=$1+$3;}
   |'-'E %prec UMINUS {$$=-$2;}
   |'('E')' {$$=$2;}
   |num {$$=$1;}
-  |alpha {$$=$1;}
   ;
 %%
 
