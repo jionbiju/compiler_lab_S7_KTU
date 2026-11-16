@@ -1,3 +1,4 @@
 *.exe
 *a.out
 *lex.yy.c
+/test
